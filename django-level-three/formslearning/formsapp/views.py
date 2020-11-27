@@ -14,6 +14,7 @@ def form_view(request):
         if form.is_valid():
             print(form.cleaned_data['name'])
             print(form.cleaned_data['email'])
+            print(form.cleaned_data['verifyemail'])
             print(form.cleaned_data['text'])
 
     return render(request,'formsapp/forms.html',{'form':form})
