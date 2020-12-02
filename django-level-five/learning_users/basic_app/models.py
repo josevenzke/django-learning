@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class UserProfileInfo(models.Model):
 
-    user = models.OneToOneFiled(User)
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
 
     #additional atribs
     portfolio_site = models.URLField(blank=True)

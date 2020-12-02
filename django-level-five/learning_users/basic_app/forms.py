@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from basic_app.models import UserProfileInfo
 
 class UserForm(forms.ModelForm):
-    password = forms.Charfield(widget=forms.PasswordInput())
+    password = forms.CharField(widget=forms.PasswordInput())
 
     class Meta():
         model = User
@@ -12,4 +12,4 @@ class UserForm(forms.ModelForm):
 class UserProfileInfoForm(forms.ModelForm):
     class Meta():
         model = UserProfileInfo
-        field = ('portfolio_site','profile_pic')
+        fields = ('portfolio_site','profile_pic')
