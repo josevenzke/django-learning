@@ -12,7 +12,7 @@ def index(request):
 
 @login_required
 def special(request):
-    return HttpResponse('you are logged in')
+    return render(request,'basic_app/special.html')
 
 @login_required
 def user_logout(request):
